@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "list": "/components/list/list"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#999"
+}

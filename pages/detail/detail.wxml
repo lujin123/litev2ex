@@ -1,0 +1,27 @@
+<view class='container'>
+  <text class='detail-title'>{{detail.title}}</text>
+
+  <view class='detail-info'>
+    <text class='node-title'>{{detail.node.title}}</text> • 
+    <text>{{detail.member.username}}</text> •
+    <text>{{detail.last_modified}}</text> • 
+    <text>{{detail.node.stars}} 次点击</text>
+  </view>
+  <rich-text class='detail-content' nodes="{{content}}"></rich-text>
+
+  <view class='reply-topic'>{{detail.replies}} 回复</view>
+  <view class='reply-item' wx:for="{{replies}}" wx:key="{{index}}">
+    <view bindtap='tapAvatar' data-id="{{item.id}}">
+      <image class='avatar' src="{{item.member.avatar_mini}}"></image>
+    </view>
+    <view class='reply-wrap'>
+      <view class='reply-info'>
+        <text class='reply-username'>{{item.member.username}}</text>
+        <text>{{item.created}}</text>
+        <text> {{index+1}}楼</text>
+      </view>
+      <view class='reply-content'>{{item.content}}</view>
+    </view>
+  </view>
+
+</view>

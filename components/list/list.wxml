@@ -1,0 +1,17 @@
+<!--components/list/list.wxml-->
+  <view class="section" wx:for="{{listData}}" wx:key="index">
+  <view bindtap='tapAvatar' data-id="{{item.id}}">
+    <image class='avatar' src="https:{{item.member.avatar_mini}}"></image>
+  </view>
+  <view class='item-row'>
+    <view class='item-title' bindtap="clickTitle" data-id="{{item.id}}">{{item.title}}</view>
+    <view class='node-info'>
+      <text class='node-title'>{{item.node.title}}</text> •
+      <text class='member-username'>{{item.member.username}}</text> •
+      <text>{{item.last_modified}}</text> • 最后回复来自
+      <text class='member-username'>{{item.last_reply_by}}</text>
+    </view>
+  </view>
+  </view>
+
+

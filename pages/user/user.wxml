@@ -1,0 +1,14 @@
+<view class='container user'>
+  <view class='avatar'>
+    <image class='avatar-iamge' src='{{user.avatar_normal}}'></image>
+  </view>
+  <view class='user-name'>{{user.username}}</view>
+  <view class='user-info'>V2EX第 {{user.id}} 号会员</view>
+  <view>加入于 {{user.created}}</view>
+  <view class='user-wrap'>
+    <view wx:if="{{user.bio}}">职业：{{user.bio}}</view>
+    <view wx:if="{{user.github}}">github： {{user.github}}</view>
+    <view wx:if="{{user.tagline}}">签名：{{user.tagline}} </view>
+    <view wx:if="{{user.location}}">地址：{{user.location}}</view>
+  </view>
+</view>
